@@ -1,0 +1,81 @@
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: white;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.dish__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 35px;
+    margin-bottom: 20px;
+}
+
+.dish__price {
+    font-size: 24px;
+}
+
+.dish__name {
+    flex-grow: 1;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.dish__count {
+    color: gray;
+    font-size: 18px;
+}
+
+.dish__button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1eee9;
+    font-family: "Onest", Arial, sans-serif;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}
+
+.dish:hover .dish__button {
+    background-color: tomato;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .dishes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-section .section-title {
+        text-align: center;
+    }
+
+    .dishes {
+        grid-template-columns: 1fr;
+    }
+}
